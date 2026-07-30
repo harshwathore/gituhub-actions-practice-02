@@ -15,7 +15,7 @@ jobs:
         run: echo "Hello from GitHub Actions!"
      
       - name: Print current date and time
-        run: echo "Current date and time: $(date)"
+        run: date
       
       - name: List files in the repository
         run: ls -la

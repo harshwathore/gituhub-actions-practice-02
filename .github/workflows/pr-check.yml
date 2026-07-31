@@ -1,13 +1,21 @@
-name: PR check workflow
+name: This is PR workflow
 
 on:
   pull_request:
+    branches:
+      -main
+    types:
+      - opened
+      - synchronize
 
 jobs:
   pr-check:
     runs-on: ubuntu-latest
-    
     steps:
-      -name:PR check
-        run: echo "Hello I am printing PR workflow"
+      - name: checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Print PR
+        run: echo "This is PR workflow"
+
 
